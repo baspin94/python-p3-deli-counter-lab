@@ -18,11 +18,17 @@ def take_a_number(katz_deli, new_person):
     print(f"Welcome, {new_person}. You are number {person_index} in line.")
 
 def now_serving(katz_deli):
-    i = len(katz_deli)
-    while i > 0:
-        head_of_line = katz_deli.pop(0)
-        print(f"Currently serving {head_of_line}.")
-        i -= 1
+    if not katz_deli:
+        print ("There is nobody waiting to be served!")
+    else:
+        print(f"Currently serving {katz_deli[0]}.")
+        katz_deli.pop(0)
+
+    # i = len(katz_deli)
+    # while i > 0:
+    #     head_of_line = katz_deli.pop(0)
+    #     print(f"Currently serving {head_of_line}.")
+    #     i -= 1
     
 
 """ ipdb.set_trace() """
