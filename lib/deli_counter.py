@@ -12,8 +12,12 @@ def line(katz_deli):
             line_readout += f" {i}. {katz_deli[index]}"
         print(line_readout)
 
-def take_a_number():
-    pass
+def take_a_number(katz_deli, new_person):
+    katz_deli.append(new_person)
+    person_index = katz_deli.index(new_person) + 1
+    print(f"Welcome, {new_person}. You are number {person_index} in line.")
+
+    
 
 def now_serving():
     pass
